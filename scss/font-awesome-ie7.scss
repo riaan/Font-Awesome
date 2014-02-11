@@ -1,0 +1,77 @@
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ *
+ *	IE7 4.0.3 by riaan - https://github.com/riaan
+ */
+
+@import "variables-ie7";
+
+.fa-lg {
+  font-size:1.3333333333333333em;
+  margin-top:-4px;
+  padding-top:3px;
+  margin-bottom:-4px;
+  padding-bottom:3px;
+  vertical-align:middle;
+  line-height: 1em;
+}
+
+.nav {
+  [class^="fa-"],
+  [class*=" fa-"] {
+    vertical-align: inherit;
+    margin-top: -4px;
+    padding-top: 3px;
+    margin-bottom: -4px;
+    padding-bottom: 3px;
+    &.fa-lg {
+      vertical-align: -25%;
+    }
+  }
+}
+
+.nav-pills, .nav-tabs {
+  [class^="fa-"],
+  [class*=" fa-"] {
+    &.fa-lg {
+      line-height: .75em;
+      margin-top: -7px;
+      padding-top: 5px;
+      margin-bottom: -5px;
+      padding-bottom: 4px;
+    }
+  }
+}
+
+.btn {
+  [class^="fa-"],
+  [class*=" fa-"] {
+    &.pull-left, &.pull-right { vertical-align: inherit; }
+    &.fa-lg {
+      margin-top: -.5em;
+    }
+  }
+}
+
+a [class^="fa-"],
+a [class*=" fa-"] {
+  cursor: pointer;
+}
+
+.fa-stack {
+
+	.fa-stack-1x { top: 0.5em; }
+
+	&.fa-lg {
+		.fa-stack-1x { top: 0.667em; }
+	}
+}
+
+@each $i in $fa-vars-all-items-list {
+
+	.#{$fa-css-prefix}-#{nth($i,1)} {
+
+		*zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x#{nth($i,2)};');
+    }
+}
